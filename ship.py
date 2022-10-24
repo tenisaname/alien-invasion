@@ -33,6 +33,11 @@ class Ship():
             self.x -= self.settings.ship_speed
         #Обновление атрибута rect на основании self.x
         self.rect.x = self.x
+
     def blitme(self):
         """Рисует корабль в текущей позиции"""
         self.screen.blit(self.image, self.rect)
+
+    def center_ship(self):
+        self.rect.midbottom = self.screen_rect.midbottom
+        self.x = float(self.rect.x)
