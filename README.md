@@ -8,3 +8,7 @@
 </p>
 <h1>Геймплей</h1>
 
+
+
+https://user-images.githubusercontent.com/60942207/197680566-f81ebb28-d7e2-4e07-a286-6de501ea4584.mp4
+
