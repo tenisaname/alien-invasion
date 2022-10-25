@@ -8,7 +8,4 @@
 </p>
 <h1>Геймплей</h1>
 
-
-
-https://user-images.githubusercontent.com/60942207/197680566-f81ebb28-d7e2-4e07-a286-6de501ea4584.mp4
-
+![Alien Invasion 2022-10-25 09-01-10_Trim_Trim](https://user-images.githubusercontent.com/60942207/197681088-ecc76201-8311-40e4-b001-d84fa98a9a6c.gif)
