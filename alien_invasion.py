@@ -4,6 +4,7 @@ from time import sleep
 
 
 from settings import Settings
+from scoreboard import Scoreboard
 from game_stats import GameStats
 from button import Button
 from ship import Ship
@@ -32,6 +33,11 @@ class AlienInvasion:
         self.play_button = Button(self, "Play")
         self._create_fleet()
         self.bg_color = Settings().bg_color
+
+        #Создание экземпляров для хранения статистики
+        # и панели результатов
+        self.stats = GameStats(self)
+        self.sb = Scoreboard(self)
 
     def run_game(self):
         """Запуск основного цикла игры"""
@@ -216,6 +222,8 @@ class AlienInvasion:
             bullet.draw_bullet()
         self.aliens.draw(self.screen)
 
+        #Вывод информации о счете
+        self.sb.show_score()
         #Кнопка Play отображается в том случае, если игра неактивна
         if not self.game_active:
             self.play_button.draw_button()
