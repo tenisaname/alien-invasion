@@ -26,6 +26,7 @@ class AlienInvasion:
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
         self.aliens = pygame.sprite.Group()
+
         #Игра запускается не в активном состоянии
         self.game_active = False
         self.play_button = Button(self, "Play")
@@ -65,7 +66,7 @@ class AlienInvasion:
             #Уничтожение существующих снарядов и создание новго флота
             self.bullets.empty()
             self._create_fleet()
-
+            self.settings.increase_speed()
 
     def _check_events(self):
         """Обрабатывает нажатие клавиш и событий мыши"""
@@ -85,6 +86,9 @@ class AlienInvasion:
         """Запускает новую игру при нажатии кнопки Play"""
         button_clicked = self.play_button.rect.collidepoint(mouse_pos)
         if button_clicked and not self.game_active:
+
+            #Сброс игровых настроек
+            self.settings.initialize_dynamic_settings()
 
             #Скрываем указатель мыши
             pygame.mouse.set_visible(False)
