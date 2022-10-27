@@ -39,6 +39,8 @@ class AlienInvasion:
         self.stats = GameStats(self)
         self.sb = Scoreboard(self)
 
+
+
     def run_game(self):
         """Запуск основного цикла игры"""
         while True:
@@ -67,12 +69,18 @@ class AlienInvasion:
         collisions = pygame.sprite.groupcollide(
             self.bullets, self.aliens, True, True)
 
+        if collisions:
+            for aliens in collisions.values():
+                self.stats.score += self.settings.alien_points * len(aliens)
+            self.sb.prep_score()
+
         if not self.aliens:
 
             #Уничтожение существующих снарядов и создание новго флота
             self.bullets.empty()
             self._create_fleet()
             self.settings.increase_speed()
+
 
     def _check_events(self):
         """Обрабатывает нажатие клавиш и событий мыши"""
@@ -102,6 +110,7 @@ class AlienInvasion:
             #Сброс игровой статистики
             self.stats.reset_stats()
             self.game_active = True
+            self.sb.prep_score()
 
             #Очистка списков пришельцев и снарядов
             self.aliens.empty()
@@ -213,6 +222,7 @@ class AlienInvasion:
                 #Происходит то же, что при столкновении с кораблем
                 self._ship_hit()
                 break
+
     def _update_screen(self):
         """Обновляет изображение на экран и отображает новый экран"""
         #При каждом проходе цикла перерисовывается экран.
