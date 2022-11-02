@@ -205,7 +205,9 @@ class AlienInvasion:
         """Обрабатывает столкновения корабля с пришельцем"""
         #Уменьшение ships_left
         if self.stats.ships_left > 0:
+            #Уменьшение ships_left и обновление панели счета
             self.stats.ships_left -= 1
+            self.sb.prep_score()
             #Очистка списков пришельцев и снарядов
             self.aliens.empty()
             self.bullets.empty()
