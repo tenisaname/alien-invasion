@@ -8,4 +8,5 @@
 </p>
 <h1>Геймплей</h1>
 
-![Alien Invasion 2022-10-25 09-01-10_Trim_Trim](https://user-images.githubusercontent.com/60942207/197681088-ecc76201-8311-40e4-b001-d84fa98a9a6c.gif)
+
+![Alien Invasion 2022-11-03 12-55-17_Trim](https://user-images.githubusercontent.com/60942207/199692557-ef15f120-9aec-4d7b-b936-4f7cac855ad3.gif)
