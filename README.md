@@ -13,7 +13,6 @@
 
 <h1>Обозначение:</h1>
 В верхнем левом углу показывается количество жизней
-![1](https://user-images.githubusercontent.com/60942207/199693259-7f8e95df-ce72-4b40-9f91-25724fc1a396.png)
-
+<img src="(https://user-images.githubusercontent.com/60942207/199693259-7f8e95df-ce72-4b40-9f91-25724fc1a396.png">
 <br>По середине экрана показывается рекорд
 <br>
